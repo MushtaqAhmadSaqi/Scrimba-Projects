@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #4d1a8a;
+}
+
+@font-face {
+  font-family: MyFound;
+  src: url(CursedTimerUlil-Aznm.ttf);
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+div h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 149px;
+  height: 36px;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+.home-score {
+  width: 155px;
+  height: 120px;
+  border-radius: 5px;
+  background-color: #080001;
+}
+
+.home-text p {
+  width: 117px;
+  height: 120px;
+  font-family: MyFound;
+  font-size: 90px;
+  font-weight: 400;
+  color: #f94f6d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+}
+
+.btn {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-evenly;
+  /* align-items: center; */
+  gap: 6px;
+  width: 155px;
+  color: white;
+}
+
+.btn-same {
+  width: 155px;
+  height: 45px;
+  border-radius: 5px;
+  color: #9aabd8;
+  border: 3px solid #9aabd8;
+}
+.btn-same p {
+  width: 30px;
+  height: 25.766870498657227px;
+  font-family: MyFound;
+  font-weight: 400px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.btn-same:hover {
+  background-color: #5176da;
+  color: #080001;
+  cursor: pointer;
+}

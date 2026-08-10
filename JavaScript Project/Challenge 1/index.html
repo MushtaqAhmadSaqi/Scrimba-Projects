@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1>HOME</h1>
+        <div class="home-score">
+          <div class="home-text">
+            <p id="home-count" onclick="homeIncrease()">0</p>
+          </div>
+          <div class="btn">
+            <div class="btn-same" id="home-one" onclick="increaseHomeOne()">
+              <p>+1</p>
+            </div>
+            <div class="btn-same" id="home-two" onclick="increaseHomeTwo()">
+              <p>+2</p>
+            </div>
+            <div class="btn-same" id="home-three" onclick="increaseHomeThree()">
+              <p>+3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h1>GUEST</h1>
+        <div class="home-score">
+          <div class="home-text">
+            <p id="guest-count">0</p>
+          </div>
+          <div class="btn">
+            <div class="btn-same" id="guest-one" onclick="increaseGuestOne()">
+              <p>+1</p>
+            </div>
+            <div class="btn-same" id="guest-two" onclick="increaseGuestTwo()">
+              <p>+2</p>
+            </div>
+            <div
+              class="btn-same"
+              id="guest-three"
+              onclick="increaseGuestThree()"
+            >
+              <p>+3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
