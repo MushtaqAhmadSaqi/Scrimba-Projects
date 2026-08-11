@@ -92,20 +92,32 @@ const characters = [
   "/",
 ];
 
-let password1El = document.getElementById("password1");
-const password2El = document.getElementById("password2-el");
+const password1El = document.getElementById("password1");
+const password2El = document.getElementById("password2");
 
-function generatePasswords() {
-  password1El.textContent = "";
-  for (let i = 0; i < 15; i++) {
-    let pasword = Math.floor(Math.random() * characters.length);
-    password1El.textContent += characters[pasword];
-  }
-}
-//   let pasword = Math.floor(Math.random() * characters.length);
-//     // return characters[pasword];
-//   password1El.textContent = characters[pasword];
+// function generatePasswords() {
+//   password1El.textContent = "";
+//   password2El.textContent = "";
+
+//   for (let i = 0; i < 15; i++) {
+//     let pasword = Math.floor(Math.random() * characters.length);
+//     password1El.textContent += characters[pasword];
+//     password2El.textContent += characters[pasword];
+//   }
 // }
-// console.log(pasword);
-// password1El.textContent = generatePasswords();
-// >nfJjy!dDvR&ial
+
+function createRandomPassword(length = 15) {
+  let password = "";
+  for (let i = 0; i < length; i++) {
+    password += characters[Math.floor(Math.random() * characters.length)];
+  }
+
+  return password;
+}
+
+const generateBtn = document.getElementById("generate");
+
+generateBtn.addEventListener("click", () => {
+  password1El.textContent = createRandomPassword(15);
+  password2El.textContent = createRandomPassword(15);
+});
