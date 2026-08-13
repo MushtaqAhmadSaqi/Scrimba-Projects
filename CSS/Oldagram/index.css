@@ -1,0 +1,96 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  /* border-bottom: 1px solid #dbdbdb; */
+}
+.profile-pic {
+  width: 30%;
+  height: auto;
+}
+#myImg {
+  border-radius: 50%;
+  width: 20%;
+  /* height: 200px; */
+}
+
+.profile {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+#pro-pic {
+  width: 12%;
+  border-radius: 50%;
+  float: left;
+}
+
+h3 {
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+#location {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.dp-sec {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  /* background-color: red; */
+}
+
+#post-img {
+  width: 100%;
+  height: 90vh;
+}
+
+.like-com {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.text-content {
+  margin-left: 20px;
+}
+
+.text-content p {
+  font-size: 20px;
+}
+
+.likes {
+  font-weight: bold;
+}
+
+span {
+  font-weight: bold;
+}
+
+.like-icon:hover {
+  cursor: pointer;
+  /* color: red; */
+  background-color: red;
+}
+.comment-icon:hover {
+  cursor: pointer;
+  /* color: red; */
+  background-color: blue;
+}
+.share-icon:hover {
+  cursor: pointer;
+  /* color: red; */
+  background-color: green;
+}
