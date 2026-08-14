@@ -7,18 +7,25 @@ const massText = document.getElementById("mass-text");
 
 // console.log(inputValue);
 
-let meter = 3.281; //feet
-let liter = 0.264; //gallons
-let kilogram = 2.204; //pounds
+const meterToFeet = 3.281; //feet
+const literToGallons = 0.264; //gallons
+const kilogramToPounds = 2.204; //pounds
+
+function convert(value, factor) {
+  return value * factor;
+}
 
 convertButton.addEventListener("click", function () {
   // console.log("Convert button clicked");
   let inputValue = Number(inputElement.value);
+  if (inputValue === 0 || isNaN(inputValue)) {
+    return alert("Please enter a valid number greater than 0");
+  }
 
-  let lengthTotal = inputValue * meter;
-  let volumeTotal = inputValue * liter;
-  let massTotal = inputValue * kilogram;
-  lengthText.textContent = `${inputValue} meters = ${lengthTotal.toFixed(2)} feet | ${inputValue} feet = ${(inputValue / meter).toFixed(2)} meters  `;
-  volumeText.textContent = `${inputValue} liters = ${volumeTotal.toFixed(2)} gallons | ${inputValue} gallons = ${(inputValue / liter).toFixed(2)} liters  `;
-  massText.textContent = `${inputValue} kilograms = ${massTotal.toFixed(2)} pounds | ${inputValue} pounds = ${(inputValue / kilogram).toFixed(2)} kilograms  `;
+  let lengthTotal = convert(inputValue, meterToFeet);
+  let volumeTotal = convert(inputValue, literToGallons);
+  let massTotal = convert(inputValue, kilogramToPounds);
+  lengthText.textContent = `${inputValue} meters = ${lengthTotal.toFixed(2)} feet | ${inputValue} feet = ${(inputValue / meterToFeet).toFixed(2)} meters  `;
+  volumeText.textContent = `${inputValue} liters = ${volumeTotal.toFixed(2)} gallons | ${inputValue} gallons = ${(inputValue / literToGallons).toFixed(2)} liters  `;
+  massText.textContent = `${inputValue} kilograms = ${massTotal.toFixed(2)} pounds | ${inputValue} pounds = ${(inputValue / kilogramToPounds).toFixed(2)} kilograms  `;
 });
