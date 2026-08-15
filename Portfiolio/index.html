@@ -1,0 +1,561 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ALEX.DEV - Frontend Engineer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-container": "#00424f",
+              "on-tertiary-fixed": "#250059",
+              "secondary-fixed-dim": "#b6c4ff",
+              "on-error-container": "#ffdad6",
+              "secondary-fixed": "#dce1ff",
+              "on-error": "#690005",
+              "on-primary-fixed-variant": "#004e5c",
+              "on-secondary-fixed": "#00164e",
+              "primary-container": "#06b6d4",
+              "surface-tint": "#4cd7f6",
+              "on-tertiary-fixed-variant": "#581db3",
+              "on-primary-fixed": "#001f26",
+              "on-background": "#e4e1e9",
+              "primary-fixed-dim": "#4cd7f6",
+              "error-container": "#93000a",
+              "on-primary": "#003640",
+              "surface-bright": "#39383e",
+              secondary: "#b6c4ff",
+              "surface-variant": "#35343a",
+              surface: "#131318",
+              "on-surface": "#e4e1e9",
+              "inverse-surface": "#e4e1e9",
+              "on-tertiary-container": "#4d02a8",
+              "tertiary-container": "#b793ff",
+              "tertiary-fixed-dim": "#d3bbff",
+              primary: "#4cd7f6",
+              "surface-dim": "#131318",
+              "tertiary-fixed": "#ebddff",
+              tertiary: "#d3bbff",
+              "inverse-primary": "#00687a",
+              "inverse-on-surface": "#303036",
+              "on-tertiary": "#3f008d",
+              "outline-variant": "#3d494c",
+              "primary-fixed": "#acedff",
+              "surface-container-high": "#2a292f",
+              "surface-container-lowest": "#0e0e13",
+              "on-surface-variant": "#bcc9cd",
+              "on-secondary": "#05297a",
+              "on-secondary-fixed-variant": "#264191",
+              outline: "#869397",
+              error: "#ffb4ab",
+              background: "#131318",
+              "surface-container-highest": "#35343a",
+              "surface-container": "#1f1f25",
+              "secondary-container": "#264191",
+              "on-secondary-container": "#9db2ff",
+              "surface-container-low": "#1b1b20",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "stack-sm": "8px",
+              "stack-md": "16px",
+              "section-v-padding": "120px",
+              "stack-lg": "32px",
+              "section-v-padding-mobile": "80px",
+              gutter: "24px",
+              "container-max": "1200px",
+            },
+            fontFamily: {
+              "display-lg": ["Space Grotesk"],
+              "body-md": ["Inter"],
+              "headline-md": ["Space Grotesk"],
+              "headline-lg": ["Space Grotesk"],
+              "display-lg-mobile": ["Space Grotesk"],
+              "label-sm": ["Inter"],
+              "body-lg": ["Inter"],
+            },
+            fontSize: {
+              "display-lg": [
+                "64px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+              "headline-md": ["24px", { lineHeight: "1.4", fontWeight: "700" }],
+              "headline-lg": ["32px", { lineHeight: "1.3", fontWeight: "700" }],
+              "display-lg-mobile": [
+                "40px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "label-sm": [
+                "12px",
+                { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" },
+              ],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #0a0a0f;
+        color: #e4e1e9;
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .glass-card:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(76, 215, 246, 0.3);
+        transform: translateY(-2px);
+      }
+
+      .network-bg {
+        background-image:
+          radial-gradient(
+            circle at 50% 50%,
+            rgba(76, 215, 246, 0.05) 0%,
+            transparent 50%
+          ),
+          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size:
+          100% 100%,
+          40px 40px,
+          40px 40px;
+        background-position: center center;
+      }
+
+      .marquee {
+        display: flex;
+        overflow: hidden;
+        user-select: none;
+        gap: 2rem;
+        mask-image: linear-gradient(
+          to right,
+          transparent,
+          black 10%,
+          black 90%,
+          transparent
+        );
+      }
+
+      .marquee-content {
+        display: flex;
+        flex-shrink: 0;
+        justify-content: space-around;
+        min-width: 100%;
+        gap: 2rem;
+        animation: scroll 20s linear infinite;
+      }
+
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(calc(-100% - 2rem));
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="font-body-md text-body-md antialiased overflow-x-hidden selection:bg-primary/30 selection:text-primary"
+  >
+    <!-- Top Navigation -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 transition-all duration-300 ease-in-out"
+    >
+      <div
+        class="flex justify-between items-center max-w-[1200px] mx-auto px-gutter h-20"
+      >
+        <a
+          class="font-display-lg text-headline-md text-primary dark:text-primary tracking-tighter"
+          href="#"
+          >ALEX.DEV</a
+        >
+        <div class="hidden md:flex items-center gap-stack-lg">
+          <a
+            class="text-primary dark:text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-300"
+            href="#home"
+            >Home</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300"
+            href="#experience"
+            >Experience</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300"
+            href="#projects"
+            >Projects</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300"
+            href="#playground"
+            >Playground</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300"
+            href="#contact"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="bg-primary text-surface font-label-sm text-label-sm px-6 py-2.5 rounded-full hover:bg-surface-tint transition-colors uppercase tracking-wider hidden md:block"
+        >
+          Resume
+        </button>
+        <button class="md:hidden text-primary">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
+    <main class="w-full">
+      <!-- Hero Section -->
+      <section
+        class="relative w-full min-h-screen flex items-center pt-20 network-bg"
+        id="home"
+      >
+        <div class="max-w-container-max mx-auto px-gutter w-full relative z-10">
+          <div class="max-w-3xl">
+            <p
+              class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-stack-md"
+            >
+              Frontend Engineer
+            </p>
+            <h1
+              class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-stack-lg leading-tight"
+            >
+              Building AI-Integrated,<br />Scalable UI Systems.
+            </h1>
+            <p
+              class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-xl"
+            >
+              Frontend Engineer specializing in intelligent, high-performance
+              web platforms. Crafting experiences that bridge complex data and
+              intuitive design.
+            </p>
+            <a
+              class="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/30 px-8 py-4 rounded-full hover:bg-primary/20 hover:border-primary/50 transition-all font-label-sm text-label-sm uppercase tracking-wider group relative overflow-hidden"
+              href="#projects"
+            >
+              <span class="relative z-10">View My Work</span>
+              <span
+                class="material-symbols-outlined relative z-10 group-hover:translate-x-1 transition-transform"
+                >arrow_forward</span
+              >
+              <div
+                class="absolute inset-0 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50"
+        >
+          <span class="material-symbols-outlined text-on-surface-variant"
+            >arrow_downward</span
+          >
+        </div>
+      </section>
+      <!-- Experience Section -->
+      <section
+        class="py-section-v-padding-mobile md:py-section-v-padding max-w-container-max mx-auto px-gutter relative z-10"
+        id="experience"
+      >
+        <div class="mb-16">
+          <h2
+            class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2"
+          >
+            Career Journey
+          </h2>
+          <h3 class="font-headline-lg text-headline-lg text-on-surface">
+            Experience
+          </h3>
+        </div>
+        <div class="relative pl-8 md:pl-0">
+          <div
+            class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-outline-variant/30 -translate-x-1/2"
+          ></div>
+          <div class="md:grid grid-cols-2 gap-12 relative items-center mb-16">
+            <div class="md:text-right md:pr-12 mb-4 md:mb-0">
+              <div
+                class="inline-block bg-white/5 px-3 py-1 rounded-full text-primary font-label-sm text-label-sm mb-2"
+              >
+                2023 - Present
+              </div>
+              <h4 class="font-headline-md text-headline-md text-on-surface">
+                Frontend Engineering Intern
+              </h4>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Horquva
+              </p>
+            </div>
+            <div
+              class="hidden md:block absolute left-1/2 w-4 h-4 rounded-full bg-primary -translate-x-1/2 border-4 border-surface shadow-[0_0_10px_rgba(76,215,246,0.5)]"
+            ></div>
+            <div class="glass-card p-6 md:p-8 rounded-xl md:pl-12">
+              <ul
+                class="space-y-3 font-body-md text-body-md text-on-surface-variant"
+              >
+                <li class="flex items-start gap-3">
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5"
+                    >terminal</span
+                  >
+                  <span
+                    >Engineered robust UI-API connectivity, ensuring seamless
+                    data flow and rendering for complex dashboards.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5"
+                    >speed</span
+                  >
+                  <span
+                    >Optimized application performance and reliability, reducing
+                    load times by 30% through strategic code splitting.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5"
+                    >architecture</span
+                  >
+                  <span
+                    >Collaborated with design teams to implement strict design
+                    system guidelines across all new components.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Bento Grid -->
+      <section
+        class="py-section-v-padding-mobile md:py-section-v-padding max-w-container-max mx-auto px-gutter relative z-10"
+        id="projects"
+      >
+        <div class="mb-16">
+          <h2
+            class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2"
+          >
+            Portfolio
+          </h2>
+          <h3 class="font-headline-lg text-headline-lg text-on-surface">
+            Selected Work
+          </h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- OpenPrep (Large) -->
+          <div
+            class="glass-card rounded-xl p-8 md:col-span-2 md:row-span-2 group relative overflow-hidden flex flex-col justify-end min-h-[400px]"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface to-transparent z-10"
+            ></div>
+            <div
+              class="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500 bg-[url('placeholder')] bg-cover bg-center"
+              data-alt="Abstract digital network visualization with glowing cyan nodes and connecting lines over a dark background, representing an entry-test platform system. Minimalist and technical aesthetic, high contrast."
+            ></div>
+            <div class="relative z-20">
+              <div class="flex gap-2 mb-4">
+                <span
+                  class="bg-white/5 text-primary text-xs font-bold px-2 py-1 rounded"
+                  >React</span
+                >
+                <span
+                  class="bg-white/5 text-primary text-xs font-bold px-2 py-1 rounded"
+                  >Node.js</span
+                >
+              </div>
+              <h4
+                class="font-headline-md text-headline-md text-on-surface mb-2"
+              >
+                OpenPrep
+              </h4>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-lg"
+              >
+                Comprehensive entry-test preparation platform featuring dynamic
+                assessments and real-time analytics.
+              </p>
+              <a
+                class="inline-flex items-center text-primary font-label-sm text-label-sm uppercase tracking-wider group-hover:gap-3 transition-all"
+                href="#"
+              >
+                View Project
+                <span class="material-symbols-outlined text-[18px] ml-1"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+          </div>
+          <!-- COMSATSPREPHUB -->
+          <div
+            class="glass-card rounded-xl p-6 group relative overflow-hidden min-h-[250px] flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4"
+              >
+                <span class="material-symbols-outlined text-primary"
+                  >psychology</span
+                >
+              </div>
+              <h4
+                class="font-headline-md text-headline-md text-on-surface text-[20px] mb-2"
+              >
+                COMSATSPREPHUB
+              </h4>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant text-sm"
+              >
+                AI-driven exam preparation tool offering personalized study
+                paths.
+              </p>
+            </div>
+            <div class="mt-4 flex gap-2">
+              <span
+                class="bg-white/5 text-primary text-[10px] font-bold px-2 py-1 rounded"
+                >AI Integration</span
+              >
+            </div>
+          </div>
+          <!-- EduLearn -->
+          <div
+            class="glass-card rounded-xl p-6 group relative overflow-hidden min-h-[250px] flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4"
+              >
+                <span class="material-symbols-outlined text-primary"
+                  >video_library</span
+                >
+              </div>
+              <h4
+                class="font-headline-md text-headline-md text-on-surface text-[20px] mb-2"
+              >
+                EduLearn
+              </h4>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant text-sm"
+              >
+                Scalable video streaming platform optimized for educational
+                content delivery.
+              </p>
+            </div>
+          </div>
+          <!-- Hotel Management -->
+          <div
+            class="glass-card rounded-xl p-6 md:col-span-3 group relative overflow-hidden flex flex-col md:flex-row justify-between items-start md:items-center"
+          >
+            <div>
+              <h4
+                class="font-headline-md text-headline-md text-on-surface mb-2"
+              >
+                Hotel Management System
+              </h4>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-2xl"
+              >
+                Enterprise-grade dashboard for property management, booking
+                systems, and staff allocation.
+              </p>
+            </div>
+            <a
+              class="mt-4 md:mt-0 p-3 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+              href="#"
+            >
+              <span class="material-symbols-outlined">north_east</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer
+        class="w-full py-stack-lg border-t border-outline-variant/10 bg-surface dark:bg-surface relative z-10"
+      >
+        <div
+          class="max-w-[1200px] mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md"
+        >
+          <div class="text-center md:text-left">
+            <div class="font-display-lg text-body-lg text-on-surface mb-1">
+              ALEX.DEV
+            </div>
+            <p class="font-label-sm text-label-sm text-on-surface-variant">
+              © 2024 Built with Precision &amp; AI
+            </p>
+          </div>
+          <div class="flex items-center gap-6">
+            <a
+              class="text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100 font-label-sm text-label-sm"
+              href="#"
+              >GitHub</a
+            >
+            <a
+              class="text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100 font-label-sm text-label-sm"
+              href="#"
+              >LinkedIn</a
+            >
+            <a
+              class="text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100 font-label-sm text-label-sm"
+              href="#"
+              >Twitter</a
+            >
+            <a
+              class="text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100 font-label-sm text-label-sm flex items-center gap-1"
+              href="#home"
+            >
+              Back to Top
+              <span class="material-symbols-outlined text-[14px]"
+                >arrow_upward</span
+              >
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
