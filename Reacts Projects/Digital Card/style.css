@@ -1,0 +1,83 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #23252c;
+}
+
+.profile {
+  width: 317px;
+  height: 317px;
+  top: 44px;
+  left: 116px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.name {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 25px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.title {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12.8px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.website {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 10.24px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.same {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.email {
+  width: 115;
+  height: 34;
+  top: 468px;
+  left: 151px;
+  opacity: 1;
+  border-radius: 6px;
+  border-width: 1px;
+  padding-top: 9px;
+  padding-right: 13px;
+  padding-bottom: 9px;
+  padding-left: 11px;
+  gap: 8px;
+}
+
+.footer {
+  width: 317px;
+  height: 67px;
+  top: 468px;
+  left: 116px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
