@@ -1,0 +1,7 @@
+{
+  "name": "scrimba-projects",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix digital-card run dev"
+  }
+}
