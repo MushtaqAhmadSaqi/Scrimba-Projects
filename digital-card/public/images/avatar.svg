@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317 317" width="317" height="317">
+  <defs>
+    <linearGradient id="avatar-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <linearGradient id="avatar-skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+  </defs>
+  <rect width="317" height="317" fill="url(#avatar-bg)" />
+  <circle cx="158.5" cy="120" r="55" fill="#374151" />
+  <circle cx="158.5" cy="125" r="45" fill="url(#avatar-skin)" />
+  <!-- Hair -->
+  <path d="M 115 110 C 115 70, 202 70, 202 110 C 190 90, 130 90, 115 110 Z" fill="#1F2937" />
+  <!-- Glasses -->
+  <circle cx="140" cy="125" r="14" fill="none" stroke="#1F2937" stroke-width="3" />
+  <circle cx="177" cy="125" r="14" fill="none" stroke="#1F2937" stroke-width="3" />
+  <line x1="154" y1="125" x2="163" y2="125" stroke="#1F2937" stroke-width="3" />
+  <!-- Smile -->
+  <path d="M 143 145 Q 158.5 158, 174 145" fill="none" stroke="#1F2937" stroke-width="3" stroke-linecap="round" />
+  <!-- Shoulders / Body -->
+  <path d="M 70 317 C 70 210, 247 210, 247 317 Z" fill="#111827" />
+  <path d="M 130 220 L 158.5 260 L 187 220 Z" fill="#FFFFFF" />
+  <path d="M 153.5 220 L 158.5 260 L 163.5 220 Z" fill="#EF4444" />
+</svg>
